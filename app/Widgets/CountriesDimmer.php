@@ -28,7 +28,7 @@ class CountriesDimmer extends BaseDimmer
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-world',
             'title'  => "{$count} {$string}",
-            'text'   => 'You have '.$count.' '.Str::lower($string).' in your database.Click on button below to view all countries.',
+            'text'   => 'You have '.$count.' '.Str::lower($string).' in your database. Click on the button below to view all countries.',
             'button' => [
                 'text' => __('View countries'),
                 'link' => route('voyager.countries.index'),
