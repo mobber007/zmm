@@ -23,6 +23,7 @@ class Webshot extends Browsershot
                     ->timeout(120)
                     ->ignoreHttpsErrors()
                     ->windowSize(1920, 1080)
+                    ->setScreenshotType('jpeg')
                     ->screenshot();
                 $shot_type = "main";
                 break;
@@ -33,6 +34,7 @@ class Webshot extends Browsershot
                     ->waitUntilNetworkIdle()
                     ->ignoreHttpsErrors()
                     ->windowSize(1920, 1080)
+                    ->setScreenshotType('jpeg')
                     ->fullPage()
                     ->screenshot();
                 $shot_type = "write";
@@ -41,7 +43,7 @@ class Webshot extends Browsershot
 
 
 
-        $path = 'screenshots/'.$this->shot_name($url).'-'.$shot_type.'.png';
+        $path = 'screenshots/'.$this->shot_name($url).'-'.$shot_type.'.jpg';
 
         $disk = Storage::disk('public');
 
