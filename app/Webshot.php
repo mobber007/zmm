@@ -43,7 +43,7 @@ class Webshot extends Browsershot
 
 
 
-        $path = 'screenshots/'.$this->shot_name($url).'-'.$shot_type.'.jpg';
+        $path = 'screenshots/'.$this->shot_name($url).'/'.$shot_type.'.jpg';
 
         $disk = Storage::disk('public');
 
