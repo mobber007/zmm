@@ -30,7 +30,6 @@ class ScreenshotsDimmer extends BaseDimmer
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-camera',
             'title'  => "{$count} {$string}",
-            'text'   => 'You have '.$count.' '.Str::lower($string).' in your storage. Click on the button below to view media.',
             'button' => [
                 'text' => __('View screenshots'),
                 'link' => route('voyager.media.index'),

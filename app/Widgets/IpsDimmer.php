@@ -28,7 +28,6 @@ class IpsDimmer extends BaseDimmer
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-lab',
             'title'  => "{$count} {$string}",
-            'text'   => 'You have '.$count.' '.Str::lower($string).' in your database. Click on the button below to view all ips.',
             'button' => [
                 'text' => __('View ips'),
                 'link' => route('voyager.ips.index'),

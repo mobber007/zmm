@@ -2,12 +2,12 @@
 
 namespace App\Widgets;
 
-use App\Models\Country;
+use App\User;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
 
-class CountriesDimmer extends BaseDimmer
+class UserDimmer extends BaseDimmer
 {
     /**
      * The configuration array.
@@ -22,17 +22,17 @@ class CountriesDimmer extends BaseDimmer
      */
     public function run()
     {
-        $count = Country::all()->count();
-        $string = trans_choice('Countries', $count);
+        $count = User::all()->count();
+        $string = trans_choice('Users', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-world',
+            'icon'   => 'voyager-people',
             'title'  => "{$count} {$string}",
             'button' => [
-                'text' => __('View countries'),
-                'link' => route('voyager.countries.index'),
+                'text' => __('View users'),
+                'link' => route('voyager.users.index'),
             ],
-            'image' => voyager_asset('images/widget-backgrounds/03.jpg'),
+            'image' => voyager_asset('images/widget-backgrounds/01.jpg'),
         ]));
     }
 
