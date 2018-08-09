@@ -131,7 +131,7 @@ class RestController extends Controller
                 }
                 $this->site_data->meta_keywords = $this->categories_links_scrapper_wrapper($this->site_data->url);
                 $webshot = new Webshot();
-                $this->site_data->path_shot = $webshot->take($this->site_data->url.$this->site_data->submission_page, "full");
+               /* $this->site_data->path_shot = $webshot->take($this->site_data->url.$this->site_data->submission_page, "full");*/
                 $this->site_data->main_shot = $webshot->take($this->site_data->url, "cover");
 
 
