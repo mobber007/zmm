@@ -161,10 +161,10 @@ return [
 
         'widgets' => [
             'TCG\\Voyager\\Widgets\\UserDimmer',
-            'App\\Widgets\\ScreenshotsDimmer',
+           /* 'App\\Widgets\\ScreenshotsDimmer',
             'App\\Widgets\\RequestDimmer',
             'App\\Widgets\\CountriesDimmer',
-            'App\\Widgets\\IpsDimmer',
+            'App\\Widgets\\IpsDimmer',*/
         ],
 
     ],
